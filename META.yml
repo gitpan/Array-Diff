@@ -1,0 +1,15 @@
+---
+name: Array-Diff
+version: 0.01
+author:
+  - 'Daisuke Murase <typester@cpan.org>'
+abstract: Diff two arrays
+license: perl
+requires:
+  Algorithm::Diff: 0
+  Class::Accessor::Fast: 0
+provides:
+  Array::Diff:
+    file: lib/Array/Diff.pm
+    version: 0.01
+generated_by: Module::Build version 0.2612

@@ -1,0 +1,13 @@
+Build.PL
+Changes
+lib/Array/Diff.pm
+LICENSE
+Makefile.PL
+MANIFEST
+README
+t/001_load.t
+t/002_pod.t
+t/003_podcoverage.t
+t/004_diff.t
+Todo
+META.yml
