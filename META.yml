@@ -1,15 +1,20 @@
 ---
 name: Array-Diff
-version: 0.02
+version: 0.03
 author:
   - 'Daisuke Murase <typester@cpan.org>'
 abstract: Diff two arrays
 license: perl
+resources:
+  license: http://dev.perl.org/licenses/
 requires:
   Algorithm::Diff: 0
   Class::Accessor::Fast: 0
 provides:
   Array::Diff:
     file: lib/Array/Diff.pm
-    version: 0.02
-generated_by: Module::Build version 0.2612
+    version: 0.03
+generated_by: Module::Build version 0.28
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

@@ -14,6 +14,8 @@ DESCRIPTION
     This module do diff two arrays, and return added and deleted arrays.
     It's simple usage of Algorithm::Diff.
 
+    And if you need more complex array tools, check Array::Compare.
+
 SEE ALSO
     Algorithm::Diff
 

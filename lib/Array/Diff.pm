@@ -5,7 +5,7 @@ use base qw/Class::Accessor::Fast/;
 
 use Algorithm::Diff;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 __PACKAGE__->mk_accessors(qw/added deleted/);
 
@@ -28,6 +28,8 @@ Array::Diff - Diff two arrays
 This module do diff two arrays, and return added and deleted arrays.
 It's simple usage of Algorithm::Diff.
 
+And if you need more complex array tools, check L<Array::Compare>.
+
 =head1 SEE ALSO
 
 L<Algorithm::Diff>
@@ -49,12 +51,11 @@ sub diff {
     while ( $diff->Next ) {
         next if $diff->Same;
 
-        if ( !$diff->Items(2) ) {
-            push @{ $self->{deleted} }, $diff->Items(1);
-        }
-        else {
-            push @{ $self->{added} }, $diff->Items(2);
-        }
+        push @{ $self->{deleted} }, $diff->Items(1)
+            if $diff->Items(1);
+
+        push @{ $self->{added} }, $diff->Items(2)
+            if $diff->Items(2);
     }
 
     $self;

@@ -1,5 +1,8 @@
 Revision history for Perl module Array::Diff
 
+0.03 2006-05-24T10:46:50+09:00
+     - fixed a diff bug.
+
 0.02 2006-04-04T17:42:18+09:00
      - fixes no_plan => 1 in 004_diff.t
      - no code changes
