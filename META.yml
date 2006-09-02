@@ -1,6 +1,6 @@
 ---
 name: Array-Diff
-version: 0.03
+version: 0.04
 author:
   - 'Daisuke Murase <typester@cpan.org>'
 abstract: Diff two arrays
@@ -13,8 +13,8 @@ requires:
 provides:
   Array::Diff:
     file: lib/Array/Diff.pm
-    version: 0.03
-generated_by: Module::Build version 0.28
+    version: 0.04
+generated_by: Module::Build version 0.2801
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2

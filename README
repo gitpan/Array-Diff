@@ -4,9 +4,10 @@ NAME
 SYNOPSIS
         my @old = ( 'a', 'b', 'c' );
         my @new = ( 'b', 'c', 'd' );
-    
-        my $diff = Array::Diff->diff( \@old, \@new );
-    
+        
+    my $diff = Array::Diff->diff( \@old, \@new );
+        
+    $diff->count   # 2
         $diff->added   # [ 'd' ];
         $diff->deleted # [ 'a' ];
 

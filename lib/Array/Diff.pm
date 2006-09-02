@@ -5,9 +5,9 @@ use base qw/Class::Accessor::Fast/;
 
 use Algorithm::Diff;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
-__PACKAGE__->mk_accessors(qw/added deleted/);
+__PACKAGE__->mk_accessors(qw/added deleted count/);
 
 =head1 NAME
 
@@ -20,6 +20,7 @@ Array::Diff - Diff two arrays
     
     my $diff = Array::Diff->diff( \@old, \@new );
     
+    $diff->count   # 2
     $diff->added   # [ 'd' ];
     $diff->deleted # [ 'a' ];
 
@@ -46,10 +47,13 @@ sub diff {
 
     $self->added(   [] );
     $self->deleted( [] );
+    $self->count( 0 );
 
     my $diff = Algorithm::Diff->new( $old, $new );
     while ( $diff->Next ) {
         next if $diff->Same;
+
+        $self->{count}++;
 
         push @{ $self->{deleted} }, $diff->Items(1)
             if $diff->Items(1);
