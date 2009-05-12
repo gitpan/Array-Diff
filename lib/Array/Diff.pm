@@ -6,7 +6,7 @@ use base qw/Class::Accessor::Fast/;
 use Algorithm::Diff;
 eval q{ use Algorithm::Diff::XS; };
 
-our $VERSION = '0.05001';
+our $VERSION = '0.05002';
 
 __PACKAGE__->mk_accessors(qw/added deleted count diff_class/);
 
@@ -117,7 +117,9 @@ L<Algorithm::Diff>
 
 Daisuke Murase <typester@cpan.org>
 
-=head1 COPYRIGHT
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (c) 2009 by Daisuke Murase.
 
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.
