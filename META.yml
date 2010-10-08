@@ -20,10 +20,10 @@ no_index:
 recommends:
   Algorithm::Diff::XS: 0
 requires:
-  Algorithm::Diff: 0.19
+  Algorithm::Diff: 1.19
   Class::Accessor::Fast: 0
   Filter::Util::Call: 0
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/typester/array-diff-perl.git
-version: 0.06
+version: 0.07
